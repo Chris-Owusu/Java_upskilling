@@ -6,10 +6,11 @@ public class Question3 {
         ifStatement(12);
         switchStatement(20);
         loops();
-        nestedLoops();
+        nestedLoops(5);
         whileLoop();
     }
 
+    // If statements
     public static void ifStatement(int age) {
         if (age >= 18) {
             System.out.println("You are an adult");
@@ -18,6 +19,7 @@ public class Question3 {
         }
     }
 
+    //Switch statements
     public static void switchStatement(int age) {
         switch(age) {
             case 2:
@@ -40,21 +42,24 @@ public class Question3 {
         }
     }
 
+    // Loops
     public static void loops() {
         for (int i= 1; i<11; i++) {
             System.out.println(i);
         }
     }
 
-    public static void nestedLoops() {
-        for (int i = 0; i<10; i++) {
-            for (int j = 0; j<10; j++) {
-                System.out.println('x');
+    // Nested for loops --> drawing a square
+    public static void nestedLoops(int size) {
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= 8; j++) {
+                System.out.print('x');
             }
             System.out.println();
         }
     }
 
+    // While loop
     public static void whileLoop() {
         int z = 10;
         while (z != 0) {
