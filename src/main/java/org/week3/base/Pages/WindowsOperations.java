@@ -8,6 +8,11 @@ public class WindowsOperations {
 
     private WebDriver driver;
 
+    //Constructor, as every page needs a WebDriver to find elements
+    public WindowsOperations(WebDriver driver) {
+        this.driver = driver;
+    }
+
     @FindBy(
             xpath = "//a[text()='Window Operations']"
     )

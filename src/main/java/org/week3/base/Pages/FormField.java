@@ -3,14 +3,20 @@ package org.week3.base.Pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 public class FormField {
     private WebDriver driver;
 
+    //Constructor, as every page needs a Webdriver to find elements
+    public FormField(WebDriver driver) {
+        this.driver = driver;
+    }
+
     @FindBy(
             xpath = "//a[text()='Form Fields']"
     )
-    private WebElement FormFieldBtn;
+    private WebElement formFieldBtn;
 
     @FindBy(
             id = "name"
@@ -51,5 +57,54 @@ public class FormField {
             id = "submit-btn"
     )
     private WebElement submitBtn;
+
+
+
+    // Method to click the 'Form Fields' button
+    public void clickFormFieldButton() {
+        formFieldBtn.click();
+    }
+
+    // Method to enter text in the 'Name' field
+    public void enterName(String text) {
+        name.sendKeys(text);
+    }
+
+    // Method to select 'Water' from the checkbox
+    public void selectWater() {
+        water.click();
+    }
+
+    // Method to select the 'Wine' checkbox
+    public void selectWine() {
+        wine.click();
+    }
+
+    // Method to select the 'Green' radio button
+    public void selectGreenColor() {
+        green.click();
+    }
+
+    // Method to enter a number in the 'Siblings' field
+    public void enterSiblingCount() {
+        Select selectSiblings = new Select(siblings);
+        selectSiblings.selectByVisibleText("Yes");
+
+    }
+
+    // Method to enter text in the 'Email' field
+    public void enterEmail(String emailAddress) {
+        email.sendKeys(emailAddress);
+    }
+
+    // Method to enter text in the 'Message' text area
+    public void enterMessage(String messageText) {
+        message.sendKeys(messageText);
+    }
+
+    // Method to click the 'Submit' button
+    public void clickSubmitButton() {
+        submitBtn.click();
+    }
 
 }

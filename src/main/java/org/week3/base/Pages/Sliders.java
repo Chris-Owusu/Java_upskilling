@@ -8,6 +8,11 @@ public class Sliders {
 
     private WebDriver driver;
 
+    //Constructor, as every page needs a WebDriver to find elements
+    public Sliders(WebDriver driver) {
+        this.driver = driver;
+    }
+
     @FindBy(
             xpath = "//a[text()='Sliders']"
     )

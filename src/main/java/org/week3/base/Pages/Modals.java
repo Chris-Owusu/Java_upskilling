@@ -8,6 +8,11 @@ public class Modals {
 
     private WebDriver driver;
 
+    //Constructor, as every page needs a WebDriver to find elements
+    public Modals(WebDriver driver) {
+        this.driver = driver;
+    }
+
     @FindBy(
             xpath = "//a[text()='Modals']"
     )
