@@ -14,7 +14,7 @@ import static java.time.temporal.ChronoUnit.SECONDS;
 public class Iframes {
     private WebDriver driver;
 
-    //Constructor, as every page needs a WebDriver to find elements
+    // Constructor, as every page needs a WebDriver to find elements
     public Iframes(WebDriver driver) {
         this.driver = driver;
     }

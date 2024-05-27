@@ -24,6 +24,11 @@ public class Modals {
     private WebElement simpleModal;
 
     @FindBy(
+            css = "div[id='popmake-1318'] button[aria-label='Close']"
+    )
+    private WebElement simpleModalCancelBtn;
+
+    @FindBy(
             id = "formModal"
     )
     private WebElement formModal;
@@ -47,4 +52,11 @@ public class Modals {
             css = "#contact-form-comment-g1051-message"
     )
     private WebElement formModalSubmitBtn;
+
+    // Method to click 'Modals' button
+    public void clickModalsBtn() {
+        modalsBtn.click();
+    }
+
+//    public void
 }
