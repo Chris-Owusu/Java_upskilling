@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.week3.base.Pages.FormField;
-import org.week3.utilities.utility;
+import org.week3.utilities.Utility;
 
 public class FormFieldTest extends BaseTest {
 
@@ -12,7 +12,7 @@ public class FormFieldTest extends BaseTest {
     public void formFieldTest() throws InterruptedException {
         FormField formField = new FormField(driver);
 
-        utility utility = new utility(driver);
+        Utility utility = new Utility(driver);
 
 
         formField.clickFormFieldButton();
